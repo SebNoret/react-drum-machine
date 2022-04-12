@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7")
+      format("svg");
+}
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700&display=swap");
+:root {
+  --dark-blue: #182d5e;
+  --head-color: #ffffff;
+  --bg-controls: #8baedb;
+  --active-color: #20052e;
+}
+.App {
+  max-width: 70vw;
+  background: #0d0213;
+  /* background: #457fca; 
+  background: -webkit-linear-gradient(
+    to right,
+    #5691c8,
+    #457fca
+  ); 
+  background: linear-gradient(
+    to right,
+    #5691c8,
+    #457fca
+  );  */
+  border: 2px solid var(--dark-blue);
+  margin: 0 auto;
+  margin-top: 10vh;
+
+  box-shadow: 1px 1px 7px rgb(12, 7, 0);
+  border-radius: 5px;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
+.drum-pad-container {
+  display: block;
+  width: 60%;
+  background: var(--head-color);
+
+  color: white;
+  border: 1px solid rgb(161, 125, 125);
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+}
+.control-panel {
+  width: 30%;
+  padding: 1rem 0.5rem;
+  /* background: rgb(18, 187, 202); */
+  background: var(--head-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.7rem 0.7rem;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+}
+ul .drum-pad,
+.active {
+  display: block;
+
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.4rem;
+  font-family: "Baloo Chettan 2", cursive;
+  font-size: 2rem;
+  cursor: pointer;
+}
+ul .drum-pad {
+  background: #1b387c;
+  background: -webkit-radial-gradient(#536adc 0%, #1b387c 100%);
+  background: radial-gradient(#536adc 0%, #1b387c 100%);
+  border: 2px solid #18316d;
+  color: #fdfdff;
+}
+.active {
+  background-color: var(--active-color);
+}
+
+.screen {
+  font-family: Digital;
+  color: rgb(233, 236, 8);
+  background: #000;
+  font-size: 1.2rem;
+  padding: 0.3em 0.5em;
+  border: 0.1em solid var(--dark-blue);
+  border-radius: 0.2em;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.panel {
+  width: 100%;
+  background: var(--bg-controls);
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: 0.1rem solid var(--dark-blue);
+}
+
+.slider {
+  width: 100%;
+  appearance: none;
+  border-radius: 15px;
+  height: 0.1rem;
+  border: 1px solid var(--dark-blue);
+  background: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 1.5rem;
+  width: 0.5rem;
+
+  background: #000;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  appearance: none;
+  height: 1.5rem;
+  width: 0.5rem;
+
+  background: #000;
+  cursor: pointer;
+}
+.App-header {
+  background: var(--head-color);
+
+  text-transform: uppercase;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  width: 100%;
+
+  font-size: 1.4rem;
+  font-family: "Baloo Chettan 2", cursive;
+  font-weight: bold;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--dark-blue);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: 0.1rem solid var(--dark-blue);
+}
