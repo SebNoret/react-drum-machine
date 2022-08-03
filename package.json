@@ -2,6 +2,7 @@
   "name": "drum-machine",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sebnoret.github.io/Portfolio/bo%C3%AEte-%C3%A0-rythmes/drum-machine/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
