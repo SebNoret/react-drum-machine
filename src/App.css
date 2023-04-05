@@ -1,3 +1,4 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700&display=swap"); */
 @font-face {
   font-family: "Digital";
   src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
@@ -12,7 +13,7 @@
     url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7")
       format("svg");
 }
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700&display=swap");
+
 :root {
   --dark-blue: #182d5e;
   --head-color: #ffffff;
@@ -20,19 +21,10 @@
   --active-color: #20052e;
 }
 .App {
-  max-width: 70vw;
+  /*added*/
+  /*max-width: 50%;*/
   background: #0d0213;
-  /* background: #457fca; 
-  background: -webkit-linear-gradient(
-    to right,
-    #5691c8,
-    #457fca
-  ); 
-  background: linear-gradient(
-    to right,
-    #5691c8,
-    #457fca
-  );  */
+
   border: 2px solid var(--dark-blue);
   margin: 0 auto;
   margin-top: 10vh;
@@ -42,13 +34,19 @@
 }
 .container {
   display: flex;
-  justify-content: space-evenly;
+  /*added*/
+  /* justify-content: space-evenly; */
   padding-top: 8vh;
   padding-bottom: 8vh;
+  /*added*/
+  flex-direction: column;
 }
 .drum-pad-container {
   display: block;
-  width: 60%;
+  /*added*/
+  /* width: 60%; */
+  /*added*/
+  margin-bottom: 1.5rem !important;
   background: var(--head-color);
 
   color: white;
@@ -57,7 +55,8 @@
   border-radius: 5px;
 }
 .control-panel {
-  width: 30%;
+  /*added*/
+  /* width: 30%; */
   padding: 1rem 0.5rem;
   /* background: rgb(18, 187, 202); */
   background: var(--head-color);
@@ -67,6 +66,15 @@
   justify-content: space-between;
   border-radius: 5px;
 }
+.control-panel .panel:last-of-type {
+  margin-top: 1rem;
+}
+/*added*/
+.drum-pad-container,
+.control-panel {
+  margin: 0 1.5rem;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -87,7 +95,7 @@ ul .drum-pad,
   text-align: center;
   padding: 0.5rem 0.5rem;
   border-radius: 0.4rem;
-  font-family: "Baloo Chettan 2", cursive;
+  /* font-family: "Baloo Chettan 2", cursive; */
   font-size: 2rem;
   cursor: pointer;
 }
@@ -159,7 +167,7 @@ ul .drum-pad {
   width: 100%;
 
   font-size: 1.4rem;
-  font-family: "Baloo Chettan 2", cursive;
+  /* font-family: "Baloo Chettan 2", cursive; */
   font-weight: bold;
 
   padding-top: 0.5rem;
@@ -168,4 +176,42 @@ ul .drum-pad {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom: 0.1rem solid var(--dark-blue);
+}
+
+@media screen and (min-width: 539px) {
+  .App {
+    max-width: 90%;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 4vh 0;
+  }
+  .drum-pad-container {
+    margin-bottom: 0 !important;
+  }
+  .drum-pad-container,
+  .control-panel {
+    margin: 0 0.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .App {
+    max-width: 70%;
+  }
+  .App-header {
+    font-size: 2rem;
+  }
+  .drum-pad-container {
+    width: 60%;
+  }
+  .control-panel {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    max-width: 45%;
+  }
 }

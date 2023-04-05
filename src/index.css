@@ -11,17 +11,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* background: #c9d6ff; 
-  background: -webkit-linear-gradient(
-    to right,
-    #e2e2e2,
-    #c9d6ff
-  ); 
-  background: linear-gradient(
-    to right,
-    #e2e2e2,
-    #c9d6ff
-  );  */
   background: #41295a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
