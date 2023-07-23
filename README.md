@@ -13,6 +13,4 @@ Une application de boîte à rythme écrite en React et constituant un de projet
 La boîte à rythmes propose de pouvoir choisir entre deux banques de sons (affichées grâce le composant React-drop-down).
 Le déclanchement des sons peut être effectué par un click de souris ou par une pression sur la touche de clavier correspondante.
 
-## TODO
 
-- Finir de rendre le design CSS complètement responsive.
